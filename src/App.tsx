@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import './App.css'
-import NavItem from './navItem'
-import Home from './home'
+import Home from './navbar'
 
 function App() {
 

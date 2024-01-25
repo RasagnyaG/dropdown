@@ -6,6 +6,7 @@
     text-align: left;
     font-family: sans-serif;
     align-items: center;
+    display: inline-block;
 }
 
 .sub-navs .nav-link:hover{
@@ -14,19 +15,33 @@
 
 .sub-navs{
     opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 2rem;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     padding-top: 0.95rem;
-    width: 0;
     text-align: left;
+    width: 100%;
+}
+
+.sub-navs.nested{
+    left: calc(100% + 3rem);
+    top: -1rem
+}
+
+.sub-navs .nav-link{
+    width: 100%;
 }
 
 .sub-navs.show {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    min-width: 100%;
+    width: fit-content;
     opacity: 1;
     transform: translateY(0);
+    z-index: 999;
 }
 
 .arrow-down{
