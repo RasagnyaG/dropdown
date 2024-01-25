@@ -18,7 +18,13 @@ const NavItem = ({ name, path, sub_navs, nested }: navProps) => {
             {
                 sub_navs && <div className={`sub-navs ${isHovered ? 'show' : ''} ${nested ? 'nested' : ''}`}>
                     {
-                        sub_navs.map((n) => <NavItem name={n.name} path={n.path} sub_navs={n.sub_navs} nested={true} />)
+                        sub_navs.map((n, index) => {
+                            return <div>
+                                <NavItem name={n.name} path={n.path} sub_navs={n.sub_navs} nested={true} />
+
+                            </div>
+
+                        })
                     }
                 </div>
             }
